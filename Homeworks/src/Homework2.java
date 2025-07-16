@@ -63,7 +63,6 @@ public class Homework2 {
         System.out.println("\nПрограмма завершена!");
     }
     
-    // Метод для проверки, что строка - число
     public static boolean isNumeric(String str) {
         for (int i = 0; i < str.length(); i++) {
             if (!Character.isDigit(str.charAt(i))) {
@@ -73,18 +72,17 @@ public class Homework2 {
         return true;
     }
     
-    // Расчет налога по УСН доходы (6%)
     public static int taxEarnings(int earnings) {
         return earnings * 6 / 100;
     }
     
-    // Расчет налога по УСН доходы минус расходы (15%)
+
     public static int taxEarningsMinusSpendings(int earnings, int spendings) {
         int profit = earnings - spendings;
         return profit > 0 ? profit * 15 / 100 : 0;
     }
     
-    // Выбор оптимальной системы
+    
     public static void calculateBestTaxSystem(int earnings, int spendings) {
         int taxSimple = taxEarnings(earnings);
         int taxDiff = taxEarningsMinusSpendings(earnings, spendings);
